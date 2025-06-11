@@ -2,7 +2,7 @@
 
 ## Exercício 1
 
-Crie uma classe Aluno com os seguintes atributos:
+Crie uma classe `Aluno` com os seguintes atributos:
 
 `nome` (String)
 
@@ -19,8 +19,7 @@ Na classe App com o método main:
 
 ## Exercício 2
 
-Modifique a classe Aluno para que o método `setIdade(int idade)` só permita valores entre 0 e 120.
-Caso contrário, exiba uma mensagem de erro e não altere o valor da idade.
+Modifique a classe `Aluno` para que o método `setIdade(int idade)` só permita valores entre 0 e 120. Caso contrário, exiba uma mensagem de erro e não altere o valor da idade.
 
 Teste com valores válidos e inválidos no main.
 
@@ -66,6 +65,10 @@ método `getTemperatura()`
 
 método `exibirTemperaturaFahrenheit()` → converte e exibe em Fahrenheit
 
+Para converter a temperatura de Celsius (Tc) para Fahrenheit (Tf):
+
+``Tf = 9*Tc/5 + 32``
+
 ## Exercício 6
 
 Crie a classe `Musica` com:
@@ -80,4 +83,3 @@ Todos os atributos devem ser privados. A duração só pode ser maior que 0.
 Crie um método exibirInfo() que mostra:
 
 `"Música: [titulo] - [artista] ([minutos]m [segundos]s)"`
-

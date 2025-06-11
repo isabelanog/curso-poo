@@ -3,7 +3,6 @@ public class App {
         
         Livro livro = new Livro();
 
-        
         livro.atribuiNome("Um defeito de cor"); 
         
         System.out.println("Nome: " + livro.retornaNome());

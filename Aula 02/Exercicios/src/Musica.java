@@ -1,4 +1,5 @@
 public class Musica {
+    
  private String titulo;
     private String artista;
     private int duracao; // em segundos
