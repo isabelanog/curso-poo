@@ -1,12 +1,12 @@
 # Aula 02
 
 ## Encapsulamento
-Os atributos da classe devem ser modificados na própria classe. Todo
-atributo de classe deve ser privado, assim garantimos que ninguém os acesse
-diretamente e viole as nossas regras de negócio. encapsular é esconder
-como funcionam suas regras de negócio, os seus métodos.
-encapsulamento deixa nosso código muito mais passível de mu-
-danças.
+
+Encapsulamento é um dos princípios fundamentais da programação orientada a objetos. Ele consiste em **proteger os dados de uma classe**, permitindo que seus atributos sejam acessados e modificados apenas por meio de métodos definidos dentro da própria classe.
+
+Ao tornar os atributos **privados**, impedimos o acesso direto a eles por outras classes. Dessa forma, garantimos que qualquer alteração nos dados respeite as **regras de negócio**, mantendo a integridade das informações.
+
+Encapsular é, portanto, **esconder os detalhes internos da implementação** e expor apenas o necessário por meio de métodos públicos — geralmente chamados de *getters* e *setters*. Isso torna o código mais seguro, organizado e **mais fácil de manter e evoluir**, pois mudanças na lógica interna não afetam outras partes do sistema que utilizam a classe.
 
 ### Visibilidade dos atributos
 
@@ -15,15 +15,11 @@ danças.
 * private
 * protected
 
-
-
 ### Getters e Setters
-Se todos os atributos de nossas classes forem private, precisaremos criar
-um método sempre que quisermos que alguém consiga adicionar um valor
-ao atributo e o mesmo quando quisermos que alguém consiga ler e ex-
-ibir este valor.
-get = pegar
-set = atribuir
+
+**Getters** e **setters** são métodos especiais usados para **acessar e modificar os atributos privados** de uma classe.
+
+Quando aplicamos o princípio do **Encapsulamento**, os atributos de uma classe são declarados como `private`, ou seja, não podem ser acessados diretamente de fora da classe. Para permitir esse acesso de forma controlada, utilizamos os **métodos getters e setters**.
 
 ```
 retornaNome(); -> getNome();
@@ -31,37 +27,30 @@ atribuiNome(); -> setNome();
 ...
 ```
 
-get não recebe nenhum parâmetro e apenas re-
-torna o atributo, enquanto o set sempre recebe um parâmetro com o mesmo
-tipo do que o atributo que será atualizado.
+* `get` : não recebe nenhum parâmetro e tem como única função **retornar** o valor de um atributo.
+
+* `set` : **recebe** um parâmetro com o mesmo tipo do atributo e é responsável por **atualizar** o valor desse atributo.
 
 
 ### Construtores com parâmetros
-podemos obrigar a passagem de alguns valores logo no momento
-de criação de nossos objetos
+Na criação de um objeto em Java, podemos exigir que certos valores sejam informados logo no momento da instância. Isso é feito por meio de construtores com parâmetros.
 
- Requisito: Todo Livro precisa ter um Autor.
-    Construtor com parâmetro -> Sempre que um novo Livro for criado, 
-    deve receber um Autor como parâmetro
-    o compilador não criará mais o construtor default (vazio).
-    Portanto, o seguinte código não compila:
+ Por exermplo: Todo Livro deve ter obrigatoriamente um Autor.
+Para garantir isso, podemos criar um construtor com parâmetro que receba o autor. Ao fazer isso, o compilador não cria mais o construtor padrão (vazio) automaticamente. Nesse caso, o seguinte código não irá compilar:
 
 ```
 Livro livro = new Livro();
 ```
-Se eu quiser que seja possível criar um Livro sem autor, deve-se criar na classe
-o construtor vazio.
+Se você quiser permitir a criação de um livro sem informar o autor, precisa criar manualmente o construtor vazio na classe:
 
 ```
 public Livro() {
-
+    // construtor vazio
 }
 ```
+⚠️ A mesma classe pode ter mais de um construtor (overloaded de construtor), 
+contanto que não tenham a mesma assinatura.  O exemplo abaixo não compila, pois ambos têm a mesma quantidade e tipo de parâmetros:
 
-A mesma classe pode ter mais de um construtor (overloaded de construtor), 
-contanto que não tenham a mesma quantidade de parâmetro. 
-
-O exemplo abaixo nao compila.
 ```
 public Livro() {
 
@@ -71,6 +60,4 @@ public Livro() {
     System.out.println("Novo livro criado!");
 }
 ```
-
-Encadear construtores
 
