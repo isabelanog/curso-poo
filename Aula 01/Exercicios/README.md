@@ -1,22 +1,7 @@
-## Instruções para realização dos exercícios
 
-Para realizar os exercícios, será necessário criar um projeto Java. Siga as etapas abaixo:
+# Exercícios Aula 10
 
-1. Crie uma pasta para organizar seus projetos Java.
-Por exemplo: `curso-poo-exercicios`
-2. Abra o Visual Studio Code.
-3. No menu lateral, clique em "Create Java Project".
-4. Selecione a opção "No build tools".
-5. Escolha a pasta que você criou anteriormente (`curso-poo-exercicios`).
-6. Dê um nome ao projeto conforme a aula. Por exemplo: `aula-01`
-
-Na classe [App.java](http://App.java) ficará o método main, onde será executado a compilação dos códigos. 
-
-Para criar uma classe, clique com o botão direito em cima da pasta `src` , New Java File e selecione Class. Insira o nome da classe e pressione enter.
-
-Para compliar a classe e executar o código, pressione o botão play localizado no canto superior direito.
-
-### **Exercício 1**
+## **Exercício 1**
 
 Crie uma classe chamada `Pessoa` com os seguintes atributos:
 
@@ -47,7 +32,7 @@ Crie o construtor vazio da classe Pessoa, insira uma mensagem de criação do ob
 
 Crie o construdor com parametros da classe Pessoa
 
-### **Exercício 2**
+## **Exercício 2**
 
 ### **Criando a classe `Livro`**
 
@@ -64,12 +49,12 @@ Crie os métodos:
 
 Invoque os métodos na classe App. 
 
-### **Exercício 3**
+## **Exercício 3**
 
 Adicione um atributo do tipo `Livro` na classe `Pessoa`.
 Em seguida, implemente um método na própria classe `Pessoa` que verifique se ela possui um livro associado. O método deve exibir no terminal uma mensagem informando se a pessoa tem ou não um livro.
 
-### Exercício 4
+## Exercício 4
 
 Crie uma classe Professor com os atributos:
 

@@ -1,4 +1,4 @@
-# Aula 01
+# Programação Orientada a Objeto
 
 ## Paradigmas de programação: imperativa vs. orientada a objetos
 
@@ -160,7 +160,7 @@ Autor retornaAutor() {
 
 Quando escrevemos a instrução Livro() seguida da palavra reservada
 new, estamos pedindo para a JVM procurar a classe Livro e invocar o seu
-construtor, que se parece com: 
+construtor, que se parece com:
 
 Sempre que você
 não criar um construtor para suas classes, o compilador fará isso para você.
@@ -172,6 +172,6 @@ public class Livro {
 }
 ```
 
-Características: 
+Características:
 
 - tem o mesmo nome da classe e não tem um retorno declarado.
