@@ -1,31 +1,5 @@
-# Programação Orientada a Objeto
 
-## Paradigmas de programação: imperativa vs. orientada a objetos
-
-### **Programação Imperativa**
-
-Foco: **como** o programa realiza uma tarefa, ou seja, você escreve uma **sequência de instruções passo a passo** para o computador seguir.
-
-**Características**:
-
-- Código executado em sequência
-- Uso intenso de variáveis, estruturas de controle (`if`, `for`, `while`)
-- Manipulação direta do estado do programa
-
-**Analogia**:
-
-Imagine dar uma receita de bolo para alguém — passo a passo, você diz: "pegue 2 ovos, misture com açúcar, leve ao forno...". Cada instrução é executada na ordem em que foi escrita.
-
-**Exemplo em Java (imperativo):**
-
-```java
-int a = 5;
-int b = 10;
-int soma = a + b;
-System.out.println("A soma é: " + soma);
-```
-
-### **Programação Orientada a Objetos (POO)**
+# Programação Orientada a Objetos
 
 Foco: está em **quem** está realizando a ação. Você estrutura o código em torno de **objetos** — entidades que têm **dados (atributos)** e **ações (métodos)**.
 
@@ -37,11 +11,11 @@ Foco: está em **quem** está realizando a ação. Você estrutura o código em 
 
 ## Definição de objeto
 
-Coisa **material** ou **abstrata** que pode ser percebida pelos sentidos e descrita por meio das suas características, comportamentos e estado atual.
+Coisa **material** ou **abstrata** que pode ser percebida pelos sentidos e descrita por meio das suas **características**, **comportamentos** e **estado atual**.
 
 Ex de objeto: caneta
 
-- Caracterísitcas: modelo, cor, ponta,carga, tampada → atributos
+- Caracterísitcas: modelo, cor, ponta, carga, tampada → atributos
 - Comportamentos: escrever, rabiscar, pintar, tampar, destampar → metodos
 - Estado atual: Como a caneta está agora? Tampada, aberta, seca…
 
@@ -75,7 +49,7 @@ Observações importantes:
 
 - Abstração: quais são os atributos que importa no momento?!
 
-### Comparação entre objetos
+## Comparação entre objetos
 
 Quando criamos um novo objeto com a palavra `new`, como `new Autor()`, a variável não guarda as informações do autor (como nome ou e-mail), mas sim um caminho para acessar esse objeto na memória do computador. É como guardar o endereço de uma casa, e não a casa inteira.
 
@@ -107,17 +81,17 @@ if (autor == outroAutor) {
 
 O output impresso no console será: `Autores diferentes!`
 
-### Métodos
+## Métodos
 
 - `void` → **não retorna nada** (só executa uma ação)
 
 ```java
- void mostrarDetalhesLivro() { 
+    void mostrarDetalhesLivro() { 
 		String mensagem = "Mostrando detalhes do livro: ";
-    System.out.println(mensagem);
-    System.out.println("Nome: " + nome);
-    System.out.println("Descrição :" + descricao);
-    System.out.println("Valor: R$" + valor);
+        System.out.println(mensagem);
+        System.out.println("Nome: " + nome);
+        System.out.println("Descrição :" + descricao);
+        System.out.println("Valor: R$" + valor);
   }
 ```
 
@@ -158,20 +132,72 @@ Autor retornaAutor() {
 
 ## Construtor
 
-Quando escrevemos a instrução Livro() seguida da palavra reservada
-new, estamos pedindo para a JVM procurar a classe Livro e invocar o seu
-construtor, que se parece com:
-
-Sempre que você
-não criar um construtor para suas classes, o compilador fará isso para você.
+O construtor é um método especial usado para criar e inicializar objetos de uma classe. Por exemplo, quando escrevemos a instrução `Pessoa()` seguida da palavra reservada `new` estamos pedindo para a JVM procurar a classe `Pessoa` e invocar o seu construtor, que se parece com:
 
 ```java
-public class Livro {
-	public Livro() {
-	}
+public class Pessoa {
+	
+    public Pessoa() {
+	
+    }
+}
+```
+### Características
+* Tem o mesmo nome da classe
+* Não possui um tipo de retorno
+* Pode ter parâmetros ou não
+
+Se não for criado um construtor para a classes, o compilador fará isso para você.
+
+### Tipos
+
+* Construtor vazio:
+```java
+public class Pessoa {
+
+    public Pessoa() {
+        System.out.println("Construtor padrão chamado");
+    }
 }
 ```
 
-Características:
+⚠️ Se você criar qualquer construtor, o Java não cria mais o construtor vazio automaticamente. Aí você precisa criá-lo manualmente, se quiser usá-lo.
 
-- tem o mesmo nome da classe e não tem um retorno declarado.
+* Construtor com Parâmetros
+
+É um construtor que recebe valores para inicializar os atributos do objeto no momento da criação.
+ ```java
+ public class Pessoa {
+    
+    private String nome;
+
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+}
+ ```
+
+ * Construtores Sobrecargados (Overloaded)
+
+ Vários construtores na mesma classe, com quantidades ou tipos diferentes de parâmetros. Isso é chamado de sobrecarga de construtores.
+
+ ```java
+public class Pessoa {
+    private String nome;
+    private int idade;
+
+    public Pessoa() {
+        // Construtor vazio
+    }
+
+    public Pessoa(String nome) {
+        this.nome = nome;
+    }
+
+    public Pessoa(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+
+ ```
