@@ -3,7 +3,6 @@ public class Livro {
     String titulo;
     int numeroDePaginas;
 
-
     void mostrarDetalhes() {
         System.out.println("Exibindo detalhes do livro:");
         System.out.println("Título: " + titulo);

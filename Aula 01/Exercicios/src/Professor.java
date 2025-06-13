@@ -11,7 +11,7 @@ public class Professor {
         }
     }
 
-    void mostrarDetalhes(){
+    void mostrarDetalhes() {
         System.out.println("Exibindo detalhes do professor:");
         System.out.println("Nome do professor: " + nome);
         System.out.println("Livro: " + livro);
