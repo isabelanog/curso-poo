@@ -33,9 +33,10 @@ Como crio um objeto? Instanciando uma classe! O objeto é uma instância de uma 
 
 ```java
 public class Livro {
-		String nome;
-		String descricao;
-		double valor;
+
+    String nome;
+    String descricao;
+    double valor;
 } 
 ```
 
@@ -65,8 +66,6 @@ Autor outroAutor = new Autor();
 	outroAutor.nome = "Isabela Nogueira";
 	outroAutor.email = "isabela@email.com";
 	outroAutor.cpf = "123.456.789.10";
-	
-
 ```
 
 Na classe **App.class**:
@@ -112,7 +111,7 @@ boolean temAutor() {
     }
 ```
 
-- Objetos → retorna outro objeto, como String, Autor, List<Livro>, etc.
+- Objetos → retorna outro objeto, como `String`, `Autor`, `List<Livro>`, etc.
 
 ```java
 Autor retornaAutor() {
@@ -199,5 +198,4 @@ public class Pessoa {
         this.idade = idade;
     }
 }
-
  ```
