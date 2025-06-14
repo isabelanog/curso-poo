@@ -1,17 +1,17 @@
-# Exercícios Aula 02
+# Exercícios
 
 ## Exercício 1
 
 Crie uma classe `Aluno` com os seguintes atributos:
 
-`nome` (String)
-
-`idade` (int)
-
+```java
+String nome
+int idade
+```
 Ambos os atributos devem ser privados.
 Implemente os métodos públicos `getNome()`, `setNome()`, `getIdade()` e `setIdade()`.
 
-Na classe App com o método main:
+Na classe `App.java` com o método main:
 
 * Crie um objeto da classe Aluno
 * Atribua valores usando os setters
@@ -27,9 +27,10 @@ Teste com valores válidos e inválidos no main.
 
 Crie uma classe `Produto` com:
 
-`nome` (String)
-
-`preco` (double)
+```java
+String nome
+double preco
+```
 
 O preço não pode ser negativo. O método `setPreco(double)` deve validar isso.
 
@@ -39,17 +40,17 @@ Crie um método `exibirInfo()` que mostra nome e preço formatado.
 
 Crie a classe `Carro` com os seguintes atributos privados:
 
-`marca` (String)
-
-`velocidade` (int)
-
+```java
+String marca
+int velocidade
+```
 Crie os métodos:
 
-`acelerar(int valor)` → aumenta a velocidade
+* `acelerar(int valor)` → aumenta a velocidade
 
-`frear(int valor)` → diminui a velocidade, mas não permite que fique abaixo de 0
+* `frear(int valor)` → diminui a velocidade, mas não permite que fique abaixo de 0
 
-`getVelocidade()`
+* `getVelocidade()`
 
 No main, simule a aceleração e frenagem do carro e exiba a velocidade atual.
 
@@ -72,13 +73,11 @@ Para converter a temperatura de Celsius (Tc) para Fahrenheit (Tf):
 ## Exercício 6
 
 Crie a classe `Musica` com:
-
-`titulo` (String)
-
-`artista` (String)
-
-`duracao` (int, em segundos)
-
+```java
+String titulo
+String artista
+int duracao // em segundos
+```
 Todos os atributos devem ser privados. A duração só pode ser maior que 0.
 Crie um método exibirInfo() que mostra:
 

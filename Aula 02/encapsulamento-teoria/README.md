@@ -11,7 +11,7 @@ Encapsular é, portanto, **esconder os detalhes internos da implementação** e 
 ### Visibilidade dos atributos
 
 * default
-* public: 
+* public
 * private
 * protected
 
@@ -32,32 +32,4 @@ atribuiNome(); -> setNome();
 * `set` : **recebe** um parâmetro com o mesmo tipo do atributo e é responsável por **atualizar** o valor desse atributo.
 
 
-### Construtores com parâmetros
-Na criação de um objeto em Java, podemos exigir que certos valores sejam informados logo no momento da instância. Isso é feito por meio de construtores com parâmetros.
-
- Por exermplo: Todo Livro deve ter obrigatoriamente um Autor.
-Para garantir isso, podemos criar um construtor com parâmetro que receba o autor. Ao fazer isso, o compilador não cria mais o construtor padrão (vazio) automaticamente. Nesse caso, o seguinte código não irá compilar:
-
-```
-Livro livro = new Livro();
-```
-Se você quiser permitir a criação de um livro sem informar o autor, precisa criar manualmente o construtor vazio na classe:
-
-```
-public Livro() {
-    // construtor vazio
-}
-```
-⚠️ A mesma classe pode ter mais de um construtor (overloaded de construtor), 
-contanto que não tenham a mesma assinatura.  O exemplo abaixo não compila, pois ambos têm a mesma quantidade e tipo de parâmetros:
-
-```
-public Livro() {
-
-}
-
-public Livro() {
-    System.out.println("Novo livro criado!");
-}
-```
 
