@@ -13,9 +13,9 @@ Implemente os métodos públicos `getNome()`, `setNome()`, `getIdade()` e `setId
 
 Na classe `App.java` com o método main:
 
-* Crie um objeto da classe Aluno
+* Crie um objeto da classe `Aluno`
 * Atribua valores usando os setters
-* Exiba as informações usando os getters
+* Exiba as informações no terminal usando os getters
 
 ## Exercício 2
 
