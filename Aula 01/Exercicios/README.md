@@ -9,9 +9,11 @@ Crie uma classe chamada `Pessoa` com os seguintes atributos:
 String nome
 int idade
 ```
-Em seguida, na classe `App.java`, dentro do método `main`, crie dois objetos da classe `Pessoa` . Atribua os valores dos atributos de cada pessoa. Exiba os dados das pessoas no console.
+* Na classe `App.java`, dentro do método `main`, crie dois objetos da classe `Pessoa`.
+* Atribua os valores dos atributos de cada pessoa. 
+* Exiba os dados das pessoas no console.
 
-**Dica**: Use `System.out.println()` para mostrar os valores.
+**Dica**: Use `System.out.println()` para mostrar os valores no console.
 
 ## Exercício 2
 
@@ -22,7 +24,7 @@ Ainda usando a classe `Pessoa`, adicione um método chamado `mostrarDetalhes()` 
 Crie dois objetos do tipo `Pessoa` com o mesmo valor de `nome` e `idade`. Compare os dois objetos por um `if`. Qual foi o resultado obtido? Os objetos são iguais? Justifique sua resposta.
 
 ## Exercício 4
-Na classe `Pessoa`, Crie o método  `fazerAniversario()` o qual deve aumentar o valor da idade da pessoa em 1 ano.  Na classe App.class, no método `main`, invoque o método e mostre a idade antes e depois.
+Na classe `Pessoa`, Crie o método  `fazerAniversario()` o qual deve aumentar o valor da idade da pessoa em 1 ano.  Na classe `App.class`, no método `main`, invoque o método e mostre a idade antes e depois.
 
 **Resultado esperado**:
 
@@ -71,7 +73,7 @@ Crie os métodos:
 - `abrirLivro()`: imprime "Você abriu o livro."
 - Construtor vazio indicando que um novo `Livro` foi criado
 
-Invoque os métodos na classe App.
+Invoque os métodos na classe `App.java`.
 
 ## Exercício 8
 
@@ -80,7 +82,7 @@ Em seguida, implemente um método na própria classe `Pessoa` que verifique se e
 
 ## Exercício 9
 
-Crie uma classe Professor com os atributos:
+Crie uma classe `Professor` com os atributos:
 
 ```java
 String nome
@@ -91,6 +93,6 @@ E métodos:
 
 - `apresentar()`: imprime "Olá, meu nome é [nome] e eu ensino [disciplina]."
 
-Crie outro objeto Professor e o apresente.
+Crie outro objeto `Professor` e o apresente.
 
-Relacione o objeto Professor com a classe Livro.
+Relacione o objeto `Professor` com a classe Livro.
