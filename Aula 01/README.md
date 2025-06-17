@@ -7,7 +7,7 @@ Foco: está em **quem** está realizando a ação. Você estrutura o código em 
 
 - Usa conceitos como **classe, objeto, herança, polimorfismo, encapsulamento, abstração**
 - Enfatiza a modelagem do mundo real
-- Código mais modular, reutilizável e de fácil manutenção
+- Código modular, reutilizável e de fácil manutenção
 
 ## Definição de objeto
 
@@ -15,72 +15,93 @@ Coisa **material** ou **abstrata** que pode ser percebida pelos sentidos e descr
 
 Ex de objeto: caneta
 
-- Caracterísitcas: modelo, cor, ponta, carga, tampada → atributos
-- Comportamentos: escrever, rabiscar, pintar, tampar, destampar → metodos
-- Estado atual: Como a caneta está agora? Tampada, aberta, seca…
+- **Caracterísitcas**: modelo, cor, ponta, carga, tampada → atributos
+- **Comportamentos**: escrever, rabiscar, pintar, tampar, destampar → metodos
+- **Estado atual**: Como a caneta está agora? Tampada, aberta, seca…
 
-Objetos de exemplo a serem abordados:
+Objetos que serão abordados na aula:
 
 ![UML.png](UML.png)
 
 ## Denifição de classe
 
-Uma classe é um molde, especificação que define para a máquina virtual o que um objeto desse tipo deverá ter e como ele deve se comportar. Também, define os atributos e métodos comuns que serão compartilhados por um objeto.
+Uma classe é um **molde**, especificação que define para a máquina virtual o que um objeto desse tipo deverá ter e como ele deve se comportar. Também, **define os atributos e métodos** comuns que serão compartilhados por um objeto.
 
 ⚠️Uma classe não é necessariamente é um objeto.
 
-Como crio um objeto? Instanciando uma classe! O objeto é uma instância de uma classe.
+Regras e boas práticas para nomear classes:
+* Iniciar em letra maiúscula
+* Seguir o padrão PascalCase
+* O nome deve ser substantivo
+* Evite usar acentos ou caracteres especiais
+* Não use palavras reservadas
+* Evite abreviações desnecessárias
+
+Exemplo classe Livro:
 
 ```java
 public class Livro {
-
+    
+    //atributos da classe
+    
     String nome;
     String descricao;
     double valor;
+
+    // métdodos
 } 
 ```
 
-Para criar um objeto a partir do molde:
+Para cirar um objeto deve-se instanciar a classe. Por exemplo:
 
 ```java
 Livro livro = new Livro();
 ```
 
-Observações importantes:
-
-- Abstração: quais são os atributos que importa no momento?!
-
 ## Comparação entre objetos
 
-Quando criamos um novo objeto com a palavra `new`, como `new Autor()`, a variável não guarda as informações do autor (como nome ou e-mail), mas sim um caminho para acessar esse objeto na memória do computador. É como guardar o endereço de uma casa, e não a casa inteira.
+Quando criamos um novo objeto com a palavra `new`, como `new Livro()`, a variável não guarda as informações do livro (como nome ou descrição), mas sim um caminho para acessar esse objeto na memória do computador. É como guardar o endereço de uma casa, e não a casa inteira.
 
 Por isso, quando usamos `==`, estamos comparando os endereços, e não o conteúdo dos objetos. Como cada objeto novo tem um endereço diferente, mesmo que tenham os mesmos dados, `==` vai dizer que são diferentes.
 
 ```java
-Autor autor = new Autor();
-	autor.nome = "Isabela Nogueira";
-	autor.email = "isabela@email.com";
-	autor.cpf = "123.456.789.10";
-        
-Autor outroAutor = new Autor();
-	outroAutor.nome = "Isabela Nogueira";
-	outroAutor.email = "isabela@email.com";
-	outroAutor.cpf = "123.456.789.10";
+Livro livro = new Livro();
+livro.nmme = "Um defeito de cor";
+livro.descricao = "Descrição do livro";
+livro.valor = 60;
+
+
+Autor outroLivro = new Autor();
+outroLivro.nmme = "Um defeito de cor";
+outroLivro.descricao = "Descrição do livro";
+outroLivro.valor = 60;
+
 ```
 
 Na classe **App.class**:
 
 ```java
-if (autor == outroAutor) {
-	System.out.println("Mesmo autor!");
+if (livro == outroLivro) {
+	System.out.println("Mesmo livro!");
 } else {
-	System.out.println("Autores diferentes!");
+	System.out.println("Livros diferentes!");
 }
 ```
 
-O output impresso no console será: `Autores diferentes!`
+Será impresso no console será: `Autores diferentes!`
 
 ## Métodos
+
+Métodos em Java são blocos de código que **realizam uma ação** específica e podem ser reutilizados. Eles definem o **comportamento** de um objeto.
+
+Regras e boas práticas para nomear classes:
+* Comece com letra minúscula
+* Seguir o padrão PascalCase
+* Use nomes no singular
+* Não inclua tipo de retorno
+
+
+### Tipos de retorno
 
 - `void` → **não retorna nada** (só executa uma ação)
 
@@ -96,6 +117,7 @@ O output impresso no console será: `Autores diferentes!`
 
 - Tipos primitivos → como `int`, `double`, `boolean`, etc.
 
+Exemplo:
 ```java
 boolean temAutor() {
 
@@ -131,12 +153,12 @@ Autor retornaAutor() {
 
 ## Construtor
 
-O construtor é um método especial usado para criar e inicializar objetos de uma classe. Por exemplo, quando escrevemos a instrução `Pessoa()` seguida da palavra reservada `new` estamos pedindo para a JVM procurar a classe `Pessoa` e invocar o seu construtor, que se parece com:
+O construtor é um **método especial** usado para criar e inicializar objetos de uma classe. Por exemplo, quando escrevemos a instrução `Livro()` seguida da palavra reservada `new` estamos pedindo para a JVM procurar a classe `Livro` e invocar o seu construtor, que se parece com:
 
 ```java
-public class Pessoa {
+public class Livro {
 	
-    public Pessoa() {
+    public Livro() {
 	
     }
 }
@@ -148,30 +170,39 @@ public class Pessoa {
 
 Se não for criado um construtor para a classes, o compilador fará isso para você.
 
-### Tipos
+### Tipos de construtor
+
 
 * Construtor vazio:
-```java
-public class Pessoa {
 
-    public Pessoa() {
+O construtor vazio (ou construtor padrão) é um construtor **sem parâmetros**, usado para criar objetos sem exigir dados na criação.
+
+```java
+public class Livro {
+
+    public Livro() {
         System.out.println("Construtor padrão chamado");
     }
 }
 ```
 
-⚠️ Se você criar qualquer construtor, o Java não cria mais o construtor vazio automaticamente. Aí você precisa criá-lo manualmente, se quiser usá-lo.
+⚠️ Se você criar qualquer construtor, o Java não cria mais o construtor vazio automaticamente. Se quiser usá-lo, deve-se criar manualmente na classe.
 
 * Construtor com Parâmetros
 
 É um construtor que recebe valores para inicializar os atributos do objeto no momento da criação.
- ```java
- public class Pessoa {
-    
-    private String nome;
 
-    public Pessoa(String nome) {
+ ```java
+ public class Livro {
+    
+    String nome;
+    String descricao;
+    double valor;
+
+    public Pessoa(String nome, String descricao, double valor) {
         this.nome = nome;
+        this.descricao = descricao;
+        this.valor = valor;
     }
 }
  ```
