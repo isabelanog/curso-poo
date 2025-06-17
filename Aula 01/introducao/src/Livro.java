@@ -1,4 +1,5 @@
 public class Livro {
+
     String nome;
     String descricao;
     double valor;
@@ -10,6 +11,7 @@ public class Livro {
         System.out.println("Nome: " + nome);
         System.out.println("Descrição :" + descricao);
         System.out.println("Valor: R$" + valor);
+
         // autor.mostrarDetalhesAutor();
 
         if (this.temAutor()) {
@@ -27,7 +29,8 @@ public class Livro {
         System.out.println("Valor do livro com desconto: " + this.valor);
     }
 
-    // Introdução método com retorno
+    // Método com retorno
+
     boolean temAutor() {
 
         boolean autorExiste;
@@ -41,7 +44,7 @@ public class Livro {
         return autorExiste;
     }
 
-     Autor retornaAutor() {
+    Autor retornaAutor() {
 
         boolean autorExiste;
 
@@ -55,11 +58,20 @@ public class Livro {
         return this.autor;
     }
 
-    
-
-    // Introdução a construtor
+    // Construtor vazio
 
     public Livro() {
-        System.out.println("novo livro criado");
+        System.out.println("Novo livro criado");
+    }
+
+    // Construtor com Parâmetros
+
+    public Livro(Autor autor) {
+        this.autor = autor;
+    }
+
+    public Livro(Autor autor, int valor) {
+        this.autor = autor;
+        this.valor = valor;
     }
 }
