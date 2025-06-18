@@ -14,7 +14,7 @@ public class LivroFisico extends Livro {
         
         double desconto = getValor()*porcentagem;
         setValor(getValor() - desconto);
-        System.out.println("aplicando desconto no LivroFisico");        
+        System.out.println("Aplicando desconto no LivroFisico");        
         return true;
 }
 }

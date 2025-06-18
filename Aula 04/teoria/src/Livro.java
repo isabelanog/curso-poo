@@ -5,6 +5,19 @@ public abstract class Livro {
     private double valor;
     private Autor autor;
     
+    /*
+    por padrão, os Livros não tem desconto. A regra para cada tipo de livro
+    deve ser escrita na sua respectiva classe
+    */ 
+
+    //public boolean aplicaDescontoDe(double porcentagem) {
+    //    return false;
+    //}
+
+    //método abstrato
+
+    public abstract boolean aplicaDescontoDe(double porcentagem);
+    
     public Livro(Autor autor) {
         this.autor = autor;
     }
@@ -33,14 +46,7 @@ public abstract class Livro {
     public void setAutor(Autor autor) {
         this.autor = autor;
     }
-    /*
-    por padrão, os Livros não tem desconto. A regra para cada tipo de livro
-    deve ser escrita na sua respectiva classe
-    */ 
-
-    //public boolean aplicaDescontoDe(double porcentagem) {
-    //    return false;
-    //}
+    
 
     
 
