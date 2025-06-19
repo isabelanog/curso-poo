@@ -37,7 +37,12 @@ Regras e boas práticas para nomear classes:
 * Não use palavras reservadas
 * Evite abreviações desnecessárias
 
-Exemplo classe Livro:
+Sintaxe de declaração de atributos:
+```java
+tipoPrimitivo nomeDoAtributo;
+```
+
+Exemplo classe `Livro`:
 
 ```java
 public class Livro {
@@ -66,13 +71,13 @@ Por isso, quando usamos `==`, estamos comparando os endereços, e não o conteú
 
 ```java
 Livro livro = new Livro();
-livro.nmme = "Um defeito de cor";
+livro.nome = "Um defeito de cor";
 livro.descricao = "Descrição do livro";
 livro.valor = 60;
 
 
 Autor outroLivro = new Autor();
-outroLivro.nmme = "Um defeito de cor";
+outroLivro.nome = "Um defeito de cor";
 outroLivro.descricao = "Descrição do livro";
 outroLivro.valor = 60;
 
@@ -100,6 +105,19 @@ Regras e boas práticas para nomear classes:
 * Use nomes no singular
 * Não inclua tipo de retorno
 
+Sintáxe de um método em java:
+
+```java
+
+tipoDeAcesso tipoDeRetorno nomeDoMetodo(atributos) {
+
+    o que o método faz
+
+    return (se retornar algo)
+}
+
+```
+Após a palavra reservada `return` nenhum bloco de código é execudado, se houver.
 
 ### Tipos de retorno
 
@@ -120,16 +138,16 @@ Exemplo:
 ```java
 boolean temAutor() {
 
-        boolean autorExiste;
+    boolean autorExiste;
 
-        if (this.autor != null) {
-            autorExiste = true;
-        } else {
-            autorExiste = false;
-        }
-
-        return autorExiste;
+    if (this.autor != null) {
+        autorExiste = true;
+    } else {
+        autorExiste = false;
     }
+
+    return autorExiste;
+}
 ```
 
 - Objetos → retorna outro objeto, como `String`, `Autor`, `List<Livro>`, etc.
