@@ -3,6 +3,12 @@ public class Carro {
     private String marca;
     private int velocidade;
 
+    public void exibirInfo() {
+        System.out.println("Exibindo informações do carro");
+        System.out.println("Marca: " + this.getMarca());
+        System.out.println("Velocidade: " + this.getVelocidade());
+    }
+    
     public void setMarca(String marca) {
         this.marca = marca;
     }

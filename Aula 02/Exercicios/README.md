@@ -5,17 +5,23 @@
 Crie uma classe `Aluno` com os seguintes atributos:
 
 ```java
-String nome
-int idade
+private String nome
+private int idade
+private String curso;
 ```
-Ambos os atributos devem ser privados.
-Implemente os métodos públicos `getNome()`, `setNome()`, `getIdade()` e `setIdade()`.
+* Implemente os métodos públicos getters e setters
+* Crie um método chamado `exibirMensagem()` que retorna a mensagem:
+
+        O aluno <nome> está matriculado no curso de <curso>."
 
 Na classe `App.java` com o método main:
 
 * Crie um objeto da classe `Aluno`
 * Atribua valores usando os setters
-* Exiba as informações no terminal usando os getters
+* Exiba as informações no terminal usando os `getters`
+* Chame o método `exibirMensagem()`
+
+Após concluir todos os passos acima, crie um construtor da classe `Aluno` que receberá todos os atributos. Inicialize outro objeto da classe `Aluno` utilizando o  construtor criado. Exiba as informações no terminal usando os `gettters`
 
 ## Exercício 2
 
@@ -28,21 +34,28 @@ Teste com valores válidos e inválidos no main.
 Crie uma classe `Produto` com:
 
 ```java
-String nome
-double preco
+private String nome;
+private double preco;
+private int quantidade;
 ```
+* Crie os métodos get e set para todos os atributos.
+* Crie um construtor que recebe os 3 atributos 
 
-O preço não pode ser negativo. O método `setPreco(double)` deve validar isso.
+* O preço não pode ser negativo. O método `setPreco(double)` deve validar isso.
 
-Crie um método `exibirInfo()` que mostra nome e preço formatado.
+* Crie um método `exibirInfo()` que mostra nome e preço formatado.
+* Crie um método público chamado `calcularTotal()` que retorna o valor total do produto em estoque: `preco * quantidade `
+
+No App, instancie um produto, defina os valores e imprima o total calculado.
+
 
 ## Exercício 4
 
 Crie a classe `Carro` com os seguintes atributos privados:
 
 ```java
-String marca
-int velocidade
+private String marca
+private int velocidade
 ```
 Crie os métodos:
 
@@ -51,8 +64,10 @@ Crie os métodos:
 * `frear(int valor)` → diminui a velocidade, mas não permite que fique abaixo de 0
 
 * `getVelocidade()`
+* Crie um método `exibirInfo()` que imprime os dados do carro
 
-No main, simule a aceleração e frenagem do carro e exiba a velocidade atual.
+
+No classe App, simule a aceleração e frenagem do carro e exiba a velocidade atual.
 
 ## Exercício 5
 
@@ -79,6 +94,28 @@ String artista
 int duracao // em segundos
 ```
 Todos os atributos devem ser privados. A duração só pode ser maior que 0.
-Crie um método exibirInfo() que mostra:
+Crie um método `exibirInfo()` que mostra:
 
 `"Música: [titulo] - [artista] ([minutos]m [segundos]s)"`
+
+## Exercício 7
+
+Crie a classe Pessoa com os atributos privados:
+
+```java
+private String nome;
+private int idade;
+```
+* Crie um construtor vazio
+* Crie métodos públicos para:
+
+    - Definir o nome (setNome)
+
+    - Definir a idade (setIdade)
+
+    - Obter o nome (getNome)
+
+    - Obter a idade (getIdade)
+
+Na classe `App`, crie um objeto Pessoa, defina os dados usando os métodos set e imprima usando os métodos get.
+
