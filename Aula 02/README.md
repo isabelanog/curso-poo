@@ -66,3 +66,18 @@ public class Livro {
     }
 } 
 ```
+
+### Sintaxe dos métodos Getters e Setters
+
+* Get: 
+```java
+public <tipoDeRetorno> getNomeDoAtributo() {
+    return this.nomeDoAtributo;
+}
+```
+* Set: 
+```java
+public void setNomeDoAtributo(tipoDoAtributo nomeDoAtributo) {
+    this.nomeDoAtributo = nomeDoAtributo;
+}
+```
