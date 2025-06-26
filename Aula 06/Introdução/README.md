@@ -16,6 +16,23 @@ Declaração genérica de de uma lista de nomes utilizando o List:
 List<String> nomes;
 ```
 
+## Índices
+* Os índices iniciam em 0
+
+* O último índice é sempre `list.size() - 1`
+
+* Os elementos são acessados pelo método `get(indice)`. Exemplo:
+
+```java
+List<String> nomes = new ArrayList<>();
+nomes.add("João");
+nomes.add("Maria");
+System.out.println(nomes.get(0)); // imprime João
+
+```
+📌 Índices começam em 0 e vão até `list.size() - 1`
+
+
 ## Arraylists
 
 * É uma classe concreta que implementa a interface `List`.
@@ -26,113 +43,47 @@ List<String> nomes;
 * Ideal quando há muitas leituras/acessos aos dados.
 
 
-Exemplo:
+## Laços para percorrer as listas
+
+🔁 2. For com índice
 
 ```java
+for (int i = 0; i < nomes.size(); i++) {
+    System.out.println("Posição " + i + ": " + nomes.get(i));
+}
+```
+🔁 3. For-each (forma mais simples)
 
+```java
+for (String nome : nomes) {
+    System.out.println(nome);
+}
+```
+Mais limpo, mas não dá acesso direto ao índice.
+
+### Métodos mais usados com List
+| Método                    | Descrição                               |
+| ------------------------- | --------------------------------------- |
+| `add(elemento)`           | Adiciona um item no final               |
+| `get(indice)`             | Retorna o item na posição               |
+| `size()`                  | Retorna o tamanho da lista (quantidade) |
+| `remove(indice ou valor)` | Remove item por posição ou valor        |
+| `contains(valor)`         | Verifica se a lista contém o valor      |
+| `isEmpty()`               | Verifica se a lista está vazia          |
+| `clear()`                 | Remove todos os elementos da lista      |
+
+
+⚠️ Evite acessar índices fora do tamanho da lista!
+
+O exemplo abaixo exibirá no terminal *IndexOutOfBoundsException*:
+```java
 List<String> nomes = new ArrayList<>();
+
 nomes.add("João");
 nomes.add("Maria");
-System.out.println(nomes.get(0)); // imprime João
+nomes.add("Matheus");
 
+nomes.get(3); // Erro se a lista só tem 3 elementos (índices 0, 1, 2)
 ```
 
-## Exercícios
 
-### Exercício 1
-Crie a classe `Pessoa` com os atributos privados:
-
-```java
-private String nome;
-private int idade;
-```
-
-* Crie os métodos get e set, e um construtor com parâmetros.
-* Na classe `App`, crie uma lista do tipo `List<Pessoa>` e adicione 3 pessoas.
-* Imprima o nome e a idade de cada pessoa usando for.
-* Imprima somente os dados das pessoas com idade maior ou igual a 18
-* Imprima o primeiro e o último elemento da lista
-* Imprima a quantidade de pessoas na lista utilizando o método `size()`
-
-### Exercício 2
-Crie a classe `Produto` com os atributos:
-
-```java
-private String nome;
-private double preco;
-```
-* Crie um construtor com parâmetros e os métodos get e set.
-
-* Crie uma lista de produtos (List<Produto>) e adicione 3 produtos.
-
-* Percorra a lista e imprima o nome e o preço de cada produto.
-* Some os preços de todos os produtos da lista e imprima o valor total
-* Crie o método `exibirInfo()` que imprima:
-
-        Produto: <nome> - Preço: R$ <preco>
-
-
-## Exercício 3
-
-Ainda na classe `Produto` do exercício anterior, erie uma lista com 3 objetos `Produto`
-
-* Atualize o preço de um produto da lista usando `setPreco()`
-
-* Imprima a lista novamente com os valores atualizados
-
-
-### Exercício 4
-
-Crie uma lista com os nomes: Ana, Bruno, Carla, Diego
-
-Remova o nome “Bruno” usando o método `remove()`
-
-Imprima a lista após a remoção
-
-
-### Exercício 5
-
-Crie uma lista com frutas: Maçã, Banana, Uva
-
-Verifique se “Banana” está na lista usando o método `contains()`
-
-Imprima uma mensagem:
-
-“Está na lista” ou
-
-“Não está na lista”
-
-### Exercício 6
-
-Crie uma classe `Livro` com os atributos:
-
-```java
-private String titulo;
-private String autor;
-```
-* Crie uma lista de livros `List<Livro>`
-
-* Adicione 3 livros à lista
-
-* Imprima os títulos dos livros usando um for-each
-
-### Exercício 7
-
-Crie uma lista de números inteiros
-
-Adicione os números: 5, 1, 8, 3, 2
-
-Ordene a lista com `Collections.sort()`
-
-Imprima a lista ordenada
-
-### Exercício 8
-
-Crie uma lista com nomes
-
-Use um `for` com índice `for (int i = 0; i < list.size(); i++)`
-
-Imprima:
-```
-"Posição X: nome"
-```
