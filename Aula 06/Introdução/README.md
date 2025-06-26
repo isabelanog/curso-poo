@@ -2,7 +2,7 @@
 
 ## List
 
-* É uma **interface** da Java Collections Framework.
+* É uma **interface** da *Java Collections Framework*.
 
 * Representa uma *coleção ordenada de elementos*, ou seja, você pode acessar os elementos por índice.
 
@@ -10,7 +10,7 @@
 
 * Não pode ser instanciada diretamente.
 
-Declaração genérica de List:
+Declaração genérica de de uma lista de nomes utilizando o List:
 
 ```java
 List<String> nomes;
@@ -22,8 +22,6 @@ List<String> nomes;
 * Pode ser instanciada;
 
 * Usa um array dinâmico internamente, ou seja, cresce automaticamente conforme os elementos são adicionados.
-
-* Acesso por índice é rápido (como em arrays comuns).
 
 * Ideal quando há muitas leituras/acessos aos dados.
 
@@ -42,24 +40,48 @@ System.out.println(nomes.get(0)); // imprime João
 ## Exercícios
 
 ### Exercício 1
-Crie um programa que:
+Crie a classe `Pessoa` com os atributos privados:
 
-* Crie uma `ArrayList<String>` chamada nomes
+```java
+private String nome;
+private int idade;
+```
 
-* Adicione 3 nomes à lista
-
-* Imprima todos os nomes usando um laço for
+* Crie os métodos get e set, e um construtor com parâmetros.
+* Na classe `App`, crie uma lista do tipo `List<Pessoa>` e adicione 3 pessoas.
+* Imprima o nome e a idade de cada pessoa usando for.
+* Imprima somente os dados das pessoas com idade maior ou igual a 18
+* Imprima o primeiro e o último elemento da lista
+* Imprima a quantidade de pessoas na lista utilizando o método `size()`
 
 ### Exercício 2
-* Crie uma lista de inteiros `List<Integer>`
+Crie a classe `Produto` com os atributos:
 
-* Adicione os números: 10, 20, 30, 40 e 50
+```java
+private String nome;
+private double preco;
+```
+* Crie um construtor com parâmetros e os métodos get e set.
 
-* Imprima o primeiro e o último elemento da lista
+* Crie uma lista de produtos (List<Produto>) e adicione 3 produtos.
 
-* Mostre o tamanho da lista utilizando o método `size()`
+* Percorra a lista e imprima o nome e o preço de cada produto.
+* Some os preços de todos os produtos da lista e imprima o valor total
+* Crie o método `exibirInfo()` que imprima:
 
-### Exercício 3
+        Produto: <nome> - Preço: R$ <preco>
+
+
+## Exercício 3
+
+Ainda na classe `Produto` do exercício anterior, erie uma lista com 3 objetos `Produto`
+
+* Atualize o preço de um produto da lista usando `setPreco()`
+
+* Imprima a lista novamente com os valores atualizados
+
+
+### Exercício 4
 
 Crie uma lista com os nomes: Ana, Bruno, Carla, Diego
 
@@ -68,7 +90,7 @@ Remova o nome “Bruno” usando o método `remove()`
 Imprima a lista após a remoção
 
 
-### Exercício 4
+### Exercício 5
 
 Crie uma lista com frutas: Maçã, Banana, Uva
 
@@ -80,13 +102,13 @@ Imprima uma mensagem:
 
 “Não está na lista”
 
-### Exercício 5
+### Exercício 6
 
 Crie uma classe `Livro` com os atributos:
 
 ```java
-String titulo;
-String autor;
+private String titulo;
+private String autor;
 ```
 * Crie uma lista de livros `List<Livro>`
 
@@ -94,7 +116,7 @@ String autor;
 
 * Imprima os títulos dos livros usando um for-each
 
-### Exercício 6
+### Exercício 7
 
 Crie uma lista de números inteiros
 
@@ -104,7 +126,7 @@ Ordene a lista com `Collections.sort()`
 
 Imprima a lista ordenada
 
-### Exercício 7
+### Exercício 8
 
 Crie uma lista com nomes
 
