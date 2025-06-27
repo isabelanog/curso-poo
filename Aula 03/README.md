@@ -54,5 +54,6 @@ return true;
 
 Exemplo que será abordado em aula:
 
+![Diagrama UML](UML_Diagram.png)
 
-![Diagrama UML](UMLDiagram.png)
+
