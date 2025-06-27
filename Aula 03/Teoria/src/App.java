@@ -1,6 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
-    
+
         // regras de desconto
 
         Autor autor = new Autor();
@@ -25,7 +25,6 @@ public class App {
             System.out.println("Valor do ebook com desconto: " + ebook.getValor());
         }
 
-
         // Registro de vendas
 
         LivroFisico livroFisico = new LivroFisico(autor);
@@ -35,7 +34,6 @@ public class App {
         Ebook ebookDoLivroFisico = new Ebook(autor);
         ebookDoLivroFisico.setNome("Capitu");
         ebookDoLivroFisico.setValor(10);
-
 
         CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
         carrinhoDeCompras.adiciona(livroFisico);
