@@ -38,6 +38,7 @@ Um mesmo método pode ter comportamentos diferentes dependendo do objeto que o i
 ```
 
 * **Sobrescrita de métodos (runtime)**: uma subclasse redefine um método da superclasse com um novo comportamento. Por exemplo, na classe `Ebook`, o método aplicar desconto de tem sua própria lógica de desconto
+
 ```java
 public boolean aplicaDescontoDe(double porcentagem) {
     if (porcentagem > 0.15) {
@@ -50,3 +51,8 @@ return true;
 ```
 
 ⚠️ sempre que possível procure favorecer o uso da composição entre classes no lugar de utilizar herança.
+
+Exemplo que será abordado em aula:
+
+
+![Diagrama UML](UMLDiagram.png)
