@@ -54,6 +54,6 @@ return true;
 
 Exemplo que será abordado em aula:
 
-![Diagrama UML](UML_Diagram.png)
-
-
+<div style="text-align: center">
+<img src="UMLDiagram.png" alt="Diagrama UML" width="500" />
+</div>
