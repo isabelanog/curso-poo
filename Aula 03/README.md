@@ -55,5 +55,5 @@ return true;
 Exemplo que será abordado em aula:
 
 <div style="text-align: center">
-<img src="UMLDiagram.png" alt="Diagrama UML" width="500" />
+<img src="UML_Diagram.png" alt="Diagrama UML" width="500" />
 </div>
