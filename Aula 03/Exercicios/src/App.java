@@ -1,19 +1,17 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        
+
         Pessoa pessoa = new Pessoa();
         pessoa.setNome("João");
         pessoa.setIdade(33);
 
         pessoa.exibirDados();
-        
+
         Aluno aluno = new Aluno();
         aluno.setMatricula(123456);
         aluno.setNome("Cleiton");
         aluno.setIdade(25);
         aluno.exibirDados();
-
-
 
         // Exercício 03
 
@@ -23,30 +21,27 @@ public class App {
             a.fazerSom();
         }
 
-    // Exercício 04
+        // Exercício 04
 
-    Mensagem[] mensagens = {new MensagemTexto(), new MensagemEmail()};
+        Mensagem[] mensagens = { new MensagemTexto(), new MensagemEmail() };
 
         for (Mensagem m : mensagens) {
             m.enviar();
         }
 
+        // Exercício 05
 
-    
-
-    // Exercício 05
-
-     Transporte[] veiculos = {
-            new Bicicleta(),
-            new Carro(),
-            new Aviao()
+        Transporte[] veiculos = {
+                new Bicicleta(),
+                new Carro(),
+                new Aviao()
         };
 
         for (Transporte t : veiculos) {
             t.mover();
         }
 
-    // Exercício 06
+        // Exercício 06
 
         Retangulo retangulo = new Retangulo(5, 3);
         Quadrado quadrado = new Quadrado(4);
