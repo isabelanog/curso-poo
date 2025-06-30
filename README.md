@@ -19,7 +19,7 @@ Por exemplo: `curso-poo-exercicios`
 
 ### Pontos de atenção
 
-Na classe `App.java` ficará o método mmain`, onde será executada a compilação dos códigos.
+Na classe `App.java` ficará o método `main`, onde será executada a compilação dos códigos.
 
 Para criar uma classe, clique com o botão direito em cima da pasta `src`, selecione **New Java File** e selecione **Class**. Insira o nome da classe e pressione enter.
 
