@@ -52,7 +52,12 @@ System.out.println("Calculando perímetro...");
 Crie a classe as subclasses `Quadrado` e `Triângulo`.
 
 Sobrescreva o método `calcularPerimetro()` com as seguintes fórmulas e exiba no terminal o valor.
- 
+
  ```
  Perímetro do triângulo: 30cm
  ```
+
+Considere que o triângulo tem a medida dos lados iguais.
+Perímetro é dada pela soma das medidas dos lados.
+
+
