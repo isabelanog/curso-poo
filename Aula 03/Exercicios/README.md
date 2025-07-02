@@ -57,7 +57,8 @@ Sobrescreva o método `calcularPerimetro()` com as seguintes fórmulas e exiba n
  Perímetro do triângulo: 30cm
  ```
 
-Considere que o triângulo tem a medida dos lados iguais.
-Perímetro é dada pela soma das medidas dos lados.
+Observações:
+* Considere que o triângulo tem a medida dos lados iguais.
+* O perímetro é dado pela soma das medidas dos lados.
 
 
