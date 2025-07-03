@@ -58,5 +58,18 @@ public class App {
             produto.exibirInfo();
         }
 
+
+        // Exercicio 9
+
+        Biblioteca biblioteca = new Biblioteca("Biblioteca Central");
+
+        Livro livro1 = new Livro("O Alquimista", "Paulo Coelho", 1988);
+        Livro livro2 = new Livro("Dom Casmurro", "Machado de Assis", 1899);
+
+        biblioteca.adicionarLivro(livro1);
+        biblioteca.adicionarLivro(livro2);
+
+        biblioteca.exibirLivros();
+
     }
 }

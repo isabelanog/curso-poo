@@ -97,3 +97,26 @@ Imprima:
 ```
 Posição X: nome
 ```
+
+## Exercicio 9
+
+Você vai criar um sistema simples de gerenciamento de Biblioteca.
+
+Teremos as classes:
+
+`Livro` cujos atributos são:
+```java
+Título
+Autor
+Ano de publicação
+```
+
+`Biblioteca`
+
+Uma `Biblioteca` pode ter um ou mais livros.
+
+Implemente métodos para:
+
+- Adicionar livros à biblioteca
+
+- Exibir todos os livros cadastrados
