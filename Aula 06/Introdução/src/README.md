@@ -120,3 +120,7 @@ Implemente métodos para:
 - Adicionar livros à biblioteca
 
 - Exibir todos os livros cadastrados
+
+Diagrama UML das classes:
+
+![UML.png](UML.png)
