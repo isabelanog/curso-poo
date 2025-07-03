@@ -6,8 +6,39 @@ Uma classe abstrata é uma classe que **não pode ser instanciada** diretamente 
 No nosso exemplo, a classe `Livro` é uma abstração dos tipos `Ebook` e `LivroFisico`. Então ela fica da seguinte forma:
 
 ```java
-public class abstract Livro {
- // atributos e métodos
+public abstract class Animal {
+
+    // Atributo comum
+    protected String nome;
+
+    // Construtor
+    public Animal(String nome) {
+        this.nome = nome;
+    }
+
+    // Método concreto (já implementado)
+    public void dormir() {
+        System.out.println(nome + " está dormindo.");
+    }
+
+    // Método abstrato (deve ser implementado pelas subclasses)
+    public abstract void emitirSom();
+}
+```
+
+A subclasse Animal que herda a classe abstrata Animal fica da seguinte forma:
+
+```java
+public class Cachorro extends Animal {
+
+    public Cachorro(String nome) {
+        super(nome);
+    }
+
+    @Override
+    public void emitirSom() {
+        System.out.println(nome + " faz au au!");
+    }
 }
 ```
 
@@ -43,3 +74,28 @@ Apenas classes abstratas podem ter métodos abstratos.
 
 Por exemplo, ao tornamos o método `aplicaDescontoDe()` da classe Livro
 como abstrato, todas as classes filhas **deverão** escrevê-lo.
+
+
+## Classe Abstrata vs Herança
+
+### Herança usando classe concreta
+
+Quando você cria uma classe concreta (normal), e outras classes a estendem, todo o código da classe base já está totalmente implementado, e as subclasses apenas herdam ou sobrescrevem comportamento.
+
+**Limitação**: Se for obrigatório que as subclasses implementem certos métodos, você não consegue forçar isso diretamente. As subclasses podem simplesmente herdar tudo sem modificar nada. Se for obrigatório que as subclasses implementem certos métodos, você não consegue forçar isso diretamente. As subclasses podem simplesmente herdar tudo sem modificar nada.
+
+### Classe Abstrata
+
+Uma classe abstrata permite definir um esqueleto comum, **forçando** as subclasses a implementar certos comportamentos (métodos abstratos).
+
+Você pode também já deixar parte do código pronto (métodos concretos) e definir métodos que devem ser implementados por quem estender.
+
+
+### Principais vantagens da classe abstrata sobre apenas herança comum
+
+| Vantagem                      | Explicação                                                                                       |
+|-------------------------------|--------------------------------------------------------------------------------------------------|
+| **Forçar implementação**      | Você pode garantir que certas funcionalidades sejam obrigatórias nas subclasses.                 |
+| **Código parcialmente pronto**| Permite compartilhar código comum e ainda exigir personalização.                                 |
+| **Maior flexibilidade**       | Mistura de métodos concretos e abstratos permite definir um "molde" para as subclasses.        |
+| **Base mais clara**           | Indica explicitamente que a classe não deve ser instanciada diretamente, servindo apenas como base. |
