@@ -1,18 +1,82 @@
-## Getting Started
+# Projeto de Gerenciamento de Usuários, Projetos e Tarefas
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 📄 Descrição
 
-## Folder Structure
+Crie um diagrama UML antes de implementar das seguintes classes enumeradas abaixo.
 
-The workspace contains two folders by default, where:
+---
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+##  Classes a serem construídas
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+###  Classe `Usuario`
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- **Atributos**:
+  - `nome`: String
+  - `cpf`: String
+  - `email`: String
+  - `senha`: String
+  - `dataDeNascimento`: String
+  - `status`: StatusUsuario (enum)
+  - `tarefas`: Lista de Tarefa
 
-## Dependency Management
+---
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Classe `Projeto`
+
+- **Atributos**:
+  - `nome`: String
+  - `descricao`: String
+  - `dataInicio`: String
+  - `dataConclusao`: String
+  - `status`: StatusProjeto (enum)
+  - `tarefas`: Lista de Tarefa
+
+---
+
+###  Classe `Tarefa`
+
+- **Atributos**:
+  - `titulo`: String
+  - `dataCriacao`: String
+  - `prioridade`: Prioridade (enum)
+  - `status`: StatusTarefa (enum)
+
+---
+
+##  Enums a serem construídos
+
+###  Enum `StatusUsuario`
+- ATIVO
+- INATIVO
+- BLOQUEADO
+
+---
+
+###  Enum `Prioridade`
+- BAIXA
+- MEDIA
+- ALTA
+
+---
+
+### ✅ Enum `StatusTarefa`
+- PENDENTE
+- FAZENDO
+- CONCLUIDA
+
+---
+
+###  Enum `StatusProjeto`
+- ATIVO
+- CONCLUIDO
+- CANCELADO
+
+---
+
+## 💬 Observações
+
+- As classes `Usuario` e `Projeto` possuem uma **lista de tarefas** (relacionamento 1:N).
+- Recomendado usar **LocalDate** para datas em vez de String, caso precise trabalhar com operações de data.
+.
+
+
