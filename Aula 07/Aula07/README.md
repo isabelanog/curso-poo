@@ -4,7 +4,7 @@
 
 Crie um diagrama UML antes de implementar das seguintes classes enumeradas abaixo.
 
----
+
 
 ##  Classes a serem construídas
 
@@ -19,8 +19,6 @@ Crie um diagrama UML antes de implementar das seguintes classes enumeradas abaix
   - `status`: StatusUsuario (enum)
   - `tarefas`: Lista de Tarefa
 
----
-
 ### Classe `Projeto`
 
 - **Atributos**:
@@ -31,7 +29,7 @@ Crie um diagrama UML antes de implementar das seguintes classes enumeradas abaix
   - `status`: StatusProjeto (enum)
   - `tarefas`: Lista de Tarefa
 
----
+
 
 ###  Classe `Tarefa`
 
@@ -41,7 +39,7 @@ Crie um diagrama UML antes de implementar das seguintes classes enumeradas abaix
   - `prioridade`: Prioridade (enum)
   - `status`: StatusTarefa (enum)
 
----
+
 
 ##  Enums a serem construídos
 
@@ -50,28 +48,28 @@ Crie um diagrama UML antes de implementar das seguintes classes enumeradas abaix
 - INATIVO
 - BLOQUEADO
 
----
+
 
 ###  Enum `Prioridade`
 - BAIXA
 - MEDIA
 - ALTA
 
----
+
 
 ### ✅ Enum `StatusTarefa`
 - PENDENTE
 - FAZENDO
 - CONCLUIDA
 
----
+
 
 ###  Enum `StatusProjeto`
 - ATIVO
 - CONCLUIDO
 - CANCELADO
 
----
+
 
 ## 💬 Observações
 
