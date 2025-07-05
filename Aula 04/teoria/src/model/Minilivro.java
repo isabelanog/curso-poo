@@ -1,3 +1,4 @@
+package model;
 public class Minilivro extends Livro {
 
 public Minilivro(Autor autor) {

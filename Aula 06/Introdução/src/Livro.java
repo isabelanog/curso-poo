@@ -1,12 +1,21 @@
 public class Livro {
-    private String titulo;
+
+    protected String titulo;
     private String autor;
     private int anoPublicacao;
+
+    public Livro() {
+
+    }
 
     public Livro(String titulo, String autor, int anoPublicacao) {
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
+    }
+
+    public void exibirInfo() {
+        System.out.println("Mensagem genérica");
     }
 
     public String getTitulo() {
@@ -32,5 +41,6 @@ public class Livro {
     public void setAnoPublicacao(int anoPublicacao) {
         this.anoPublicacao = anoPublicacao;
     }
+
 
 }
