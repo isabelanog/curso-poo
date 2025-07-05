@@ -70,7 +70,6 @@ Crie um diagrama UML antes de implementar das seguintes classes enumeradas abaix
 - CANCELADO
 
 
-
 ## 💬 Observações
 
 - As classes `Usuario` e `Projeto` possuem uma **lista de tarefas** (relacionamento 1:N).
