@@ -25,8 +25,6 @@ Crie um diagrama UML antes de implementar das seguintes classes abaixo crie um p
   - `status`: StatusProjeto (enum)
   - `tarefas`: Lista de Tarefa
 
-
-
 ###  Classe `Tarefa`
 
 - **Atributos**:
@@ -34,24 +32,18 @@ Crie um diagrama UML antes de implementar das seguintes classes abaixo crie um p
   - `dataCriacao`: String
   - `prioridade`: Prioridade (enum)
   - `status`: StatusTarefa (enum)
-
-
-
 ##  Enums a serem construídos
+
 
 ###  Enum `StatusUsuario`
 - ATIVO
 - INATIVO
 - BLOQUEADO
 
-
-
 ###  Enum `Prioridade`
 - BAIXA
 - MEDIA
 - ALTA
-
-
 
 ### Enum `StatusTarefa`
 - PENDENTE
@@ -63,7 +55,7 @@ Crie um diagrama UML antes de implementar das seguintes classes abaixo crie um p
 - CONCLUIDO
 - CANCELADO
 
-## 💬 Observações
+## Observações
 
 - As classes `Usuario` e `Projeto` possuem uma **lista de tarefas** (relacionamento 1:N).
 - Recomendado usar **LocalDate** para datas.
