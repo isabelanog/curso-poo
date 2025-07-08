@@ -1,12 +1,8 @@
-# Projeto de Gerenciamento de Usuários, Projetos e Tarefas
+# Sistema de Gerenciamento de Tarefas
 
-## 📄 Descrição
+## Atividade
 
-Crie um diagrama UML antes de implementar das seguintes classes enumeradas abaixo.
-
-
-
-##  Classes a serem construídas
+Crie um diagrama UML antes de implementar das seguintes classes abaixo crie um projeto java implementando-as.
 
 ###  Classe `Usuario`
 
@@ -57,23 +53,19 @@ Crie um diagrama UML antes de implementar das seguintes classes enumeradas abaix
 
 
 
-### ✅ Enum `StatusTarefa`
+### Enum `StatusTarefa`
 - PENDENTE
-- FAZENDO
+- EM_ANDAMENTO
 - CONCLUIDA
-
-
 
 ###  Enum `StatusProjeto`
 - ATIVO
 - CONCLUIDO
 - CANCELADO
 
-
 ## 💬 Observações
 
 - As classes `Usuario` e `Projeto` possuem uma **lista de tarefas** (relacionamento 1:N).
-- Recomendado usar **LocalDate** para datas em vez de String, caso precise trabalhar com operações de data.
-.
+- Recomendado usar **LocalDate** para datas.
 
 
